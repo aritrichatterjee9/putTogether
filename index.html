@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Space</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #space-info, #space-facts, #video-container, #space-image, #know-more-button {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s, transform 1s;
+            width: 100%;
+            max-width: 600px; /* Set a maximum width for better responsiveness */
+            margin: 0 auto; /* Center the elements horizontally */
+        }
+
+        #space-info.show, #space-facts.show, #video-container.show, #space-image.show, #know-more-button.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #space-info {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #space-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .space-fact {
+            flex: 1 1 calc(50% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #video-player {
+            width: 100%;
+            height: 300px;
+            object-fit: cover; /* Ensure the video covers the entire container */
+            border-radius: 10px;
+        }
+
+        #space-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #know-more-button {
+            display: inline-block; /* Display the button as an inline-block element */
+            margin: 20px auto; /* Center the button horizontally */
+            padding: 8px 15px; /* Adjusted padding for a smaller button */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px; /* Adjusted font size for a smaller button */
+            cursor: pointer;
+            text-align: center; /* Center text within the button */
+        }
+
+        #footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <div id="space-info" class="show">
+        <h1>Discover the Wonders of Space</h1>
+        <p>Explore the beauty and mysteries of the cosmos.</p>
+    </div>
+
+    <div id="space-facts" class="show">
+        <div class="space-fact">
+            <p>The Milky Way galaxy contains billions of stars.</p>
+        </div>
+        <div class="space-fact">
+            <p>Space is not completely empty; it contains various particles and energy.</p>
+        </div>
+        <div class="space-fact">
+            <p>There are more stars in the universe than grains of sand on Earth.</p>
+        </div>
+        <div class="space-fact">
+            <p>The largest volcano in the solar system is on Mars, called Olympus Mons.</p>
+        </div>
+        <div class="space-fact">
+            <p>One day on Venus is longer than one year on Venus.</p>
+        </div>
+    </div>
+
+    <div id="video-container" class="show">
+        <!-- The player will be embedded here -->
+        <iframe id="video-player" width="600" height="300" src="https://www.youtube.com/embed/AVoV0IDivAQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <img id="space-image" class="show" src="https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg?w=1380&t=st=1699960728~exp=1699961328~hmac=57d3eb5d2b5331c074af574004ac3aac753de34edef6f02ce7e57a3019b4cf4c" alt="Space Image">
+
+    <a id="know-more-button" class="show" href="https://www.space.com" target="_blank">Know More</a>
+
+    <div id="footer">
+        <p>&copy; 2023 Explore Space. All rights reserved.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
